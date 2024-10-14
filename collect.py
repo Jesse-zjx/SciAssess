@@ -56,7 +56,6 @@ for eval_set in eval_sets:
                     result = json.load(f)
                 if metric in result:
                     eval_results[eval_set][eval] = "{:.3f}".format(result[metric]) + f" ({metric})"
-                    # eval_results[eval_set][eval] = "{:.1f}".format(result[metric]*100) + f" ({metric})"
                     count += 1
                     total_score += result[metric]
                     break

@@ -55,6 +55,7 @@ If you want to add CoT, add `export USE_COT=1` to `run_sciassess.sh` before `sci
 ---
 
 *model list* 🔥
+- o1-preview
 - gpt4o
 - gpt4
 - gpt3.5

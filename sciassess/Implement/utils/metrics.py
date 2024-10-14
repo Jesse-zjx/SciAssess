@@ -361,11 +361,7 @@ def load_embedding_model():
     if EMBEDDING_MODEL is None:
         print('loading embedding model...')
         from sentence_transformers import SentenceTransformer
-        model_base_path = os.getenv('HF_MODELS_PATH')
-        try:
-            EMBEDDING_MODEL = SentenceTransformer(os.path.join(model_base_path, 'sentence-transformers/all-mpnet-base-v2'))
-        except:
-            EMBEDDING_MODEL = SentenceTransformer(os.path.join('/vepfs/fs_unifinder/SciLLM/models', 'sentence-transformers/all-mpnet-base-v2'))
+        EMBEDDING_MODEL = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
     return EMBEDDING_MODEL
 
 
